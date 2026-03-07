@@ -1,12 +1,18 @@
-import Navbar from "../../navbar/navbar"
+import { CssBaseline } from "@mui/material"
+import Navbar from "../../components/navbar/navbar"
 import Hero from "./Sections/Hero/Hero"
+import Projects from "./Sections/Projects/project"
+import Footer from "../../components/Footer/Footer"
 
 function Home() {
  
   return (
     <>
+    <CssBaseline/>
     <Navbar/>
     <Hero/>
+    <Projects/>
+    <Footer/>
     </>
   )
 }

@@ -5,12 +5,14 @@ function Navbar() {
     display:"flex",
     justifyContent:"space-evenly"
   }))
+
   return (
     <>
+   
     <AppBar position="absolute">
         <StyledBar> 
-         <MenuItem>About</MenuItem>   
-         <MenuItem>Projects</MenuItem>   
+         <MenuItem >About</MenuItem>   
+         <MenuItem >Projects</MenuItem>  
         </StyledBar> 
     </AppBar>
     </>
