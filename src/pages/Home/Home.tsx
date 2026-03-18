@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/navbar"
 import Hero from "./Sections/Hero/Hero"
 import Projects from "./Sections/Projects/project"
 import Footer from "../../components/Footer/Footer"
-
+import About from "./Sections/About/About"
 function Home() {
  
   return (
@@ -11,6 +11,7 @@ function Home() {
     <CssBaseline/>
     <Navbar/>
     <Hero/>
+    <About/>
     <Projects/>
     <Footer/>
     </>

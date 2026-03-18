@@ -14,7 +14,7 @@ import {
 } from "@mui/material"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"
-
+import TODOlist from "../../../../assets/images/TODO_list.png"
 // --- Tipos ---
 interface Project {
   title: string
@@ -27,22 +27,22 @@ interface Project {
 // --- Seus projetos ---
 const projects: Project[] = [
   {
-    title: "API REST - E-commerce",
-    description: "API completa com autenticação JWT, CRUD de produtos e integração com pagamento. Construída com Spring Boot e PostgreSQL.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+    title: "TO-DO list",
+    description: "Em execução...",
+    image: TODOlist,
     github: "https://github.com/seu-usuario/projeto1",
     tags: ["Java", "Spring Boot", "PostgreSQL"],
   },
   {
-    title: "Microserviços - Auth",
-    description: "Serviço de autenticação com OAuth2, refresh tokens e controle de sessão distribuído usando Redis.",
+    title: "Previsão do Tempo com API",
+    description: "Em execução...",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
     github: "https://github.com/seu-usuario/projeto2",
     tags: ["Node.js", "Redis", "Docker"],
   },
   {
-    title: "CLI Tool - Deploy",
-    description: "Ferramenta de linha de comando para automatizar deploys em ambientes cloud com rollback automático.",
+    title: "Dashboard Financeiro Interativo",
+    description: "Em execução...",
     image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=600&q=80",
     github: "https://github.com/seu-usuario/projeto3",
     tags: ["Python", "AWS", "CLI"],
@@ -73,7 +73,7 @@ const SectionWrapper = styled(Box)(({ theme }) => ({
 }))
 
 const StyledCard = styled(Card)(({ theme }) => ({
-  backgroundColor: "rgba(255,255,255,0.04)",
+  backgroundColor: theme.palette.primary.dark,
   border: "1px solid rgba(255,255,255,0.08)",
   borderRadius: "16px",
   overflow: "hidden",
@@ -253,7 +253,7 @@ export default function Projects() {
             portfólio
           </Typography>
           <Typography variant="h3" color="primary.contrastText" fontWeight={700} mt={1}>
-            Projetos
+          <a id="project">Projetos</a>  
           </Typography>
           <Box
             sx={{
@@ -276,6 +276,7 @@ export default function Projects() {
           ))}
         </Grid>
       </Box>
+   
     </SectionWrapper>
   )
 }

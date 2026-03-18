@@ -2,7 +2,15 @@ import {  styled, keyframes, Grid, Typography, Button,  } from "@mui/material"
 import Avatar from "../../../../assets/images/Avatar.jpg"
 import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-  const gradientShift = keyframes`
+
+const text = "matheussouza290108@gmail.com"
+
+const copy = async () =>
+{
+  await navigator.clipboard.writeText(text);
+  alert('texto copiado!');
+}
+const gradientShift = keyframes`
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
@@ -59,6 +67,7 @@ const fadeIn = keyframes`
 }))
   
 const StyledImg = styled("img")(({theme})=> ({
+    marginLeft: "5%",
     width: "60%",
     borderRadius:"100%",
     border: `2px solid ${theme.palette.primary.contrastText}`,
@@ -77,7 +86,6 @@ const StyledImg = styled("img")(({theme})=> ({
     animationDelay: `${delay}ms`
   }))
 function Hero() {
-
   return (
     <StyledHero> 
         <Grid container  display={"flex"} justifyContent={"center"} alignItems={"center"}>
@@ -126,19 +134,18 @@ function Hero() {
               </Grid>
               <Grid size={4} display={"flex"} justifyContent={"center"}>
                 <Button 
-                
                 color="secondary"
-                 variant="outlined"
-                 sx={{
+                variant="outlined"
+                onClick={copy}
+                sx={{
                   transition: "all 0.3s ease",
                   "&:hover": {
                     transform: "translateY(-3px)",
                     boxShadow: "0 6px 20px rgba(255,255,255,0.15)",
-                   
-                  }, 
+                  },
                 }}>
-                  <MailOutlineIcon  sx={{ mr: 1}}/> 
-                   <Typography>Contact me</ Typography>
+                  <MailOutlineIcon sx={{ mr: 1}}/>
+                    <Typography>  Contact me</Typography>
                 </Button>
               </Grid>
              </Grid>

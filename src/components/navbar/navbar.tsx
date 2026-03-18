@@ -1,9 +1,11 @@
 import { AppBar, MenuItem, styled, Toolbar } from "@mui/material"
 
+
 function Navbar() {
- const StyledBar = styled(Toolbar)(()=> ({
+ const StyledBar = styled(Toolbar)(({theme})=> ({
     display:"flex",
-    justifyContent:"space-evenly"
+    justifyContent:"space-evenly",
+    backgroundColor: theme.palette.primary.dark
   }))
 
   return (
@@ -11,8 +13,11 @@ function Navbar() {
    
     <AppBar position="absolute">
         <StyledBar> 
-         <MenuItem >About</MenuItem>   
-         <MenuItem >Projects</MenuItem>  
+         <MenuItem ><a href="#about">About</a></MenuItem>   
+         <MenuItem>
+             <a href="#project">
+             Projects   </a>  
+         </MenuItem>  
         </StyledBar> 
     </AppBar>
     </>
