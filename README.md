@@ -1,3 +1,3 @@
 # Portfolio
 
-in this project, i made a portfolio to put projects that i wanna show to other people
+in this project, i made a portfolio to put projects that i wanna show to other people and save my learning
